@@ -1,0 +1,15 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: agregar inventario a memoria
+      add_host: 
+        name: "{{ demo_hostname }}"
+        groups: inventario
+
+  hosts: inventario 
+  gather_facts: false 
+
+  taks:
+    name: 
+  
